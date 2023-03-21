@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F</title>
+
+    <script>
+      function test() {
+        var x = parseInt(document.getElementById("in").value);
+        var y = document.getElementById("in2").value;
+        var x2 = x / 2;
+        var x3 = x / 2 + 1;
+        if (x % 2 != 0) {
+          alert("enter an even number");
+        } else if (x < 7) {
+          alert("enter a number greater than or equal to 8");
+        } else {
+          for (i = 1; i <= x; i++) {
+            if (i == 1 || i == 2) {
+              for (j = 1; j <= x; j++) {
+                document.write(y);
+              }
+            } else if (i == x2 || i == x3) {
+              for (j = 1; j <= x; j++) {
+                document.write(y);
+              }
+            } else {
+              document.write(y);
+            }
+
+            document.write("<br/>");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body style="background-color: rgb(122, 103, 103); text-align: center">
+    <br />
+    <br />
+    <input
+      type="text"
+      autocomplete="off"
+      id="in"
+      placeholder="enter the number"
+    />
+    <br />
+    <br />
+    <input
+      type="text"
+      autocomplete="off"
+      id="in2"
+      placeholder="enter the number"
+    />
+    <br />
+    <br />
+    <button onclick="test()">Click to Print</button>
+  </body>
+</html>
