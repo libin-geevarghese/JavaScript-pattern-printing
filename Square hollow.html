@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(93, 63, 122)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hollow square</title>
+
+    <script>
+      function test() {
+        var x = parseInt(document.getElementById("in").value);
+        var y = document.getElementById("in2").value;
+
+        for (let i = 1; i <= x; i++) {
+          for (let j = 1; j <= x; j++) {
+            if (i == 1 || j == 1) {
+              document.write(y + "&nbsp");
+            } else if (i == x || j == x) {
+              document.write(y + "&nbsp");
+            } else {
+              document.write("&nbsp&nbsp&nbsp");
+            }
+          }
+
+          document.write("<br/>");
+        }
+      }
+    </script>
+  </head>
+  <body style="text-align: center">
+    <br />
+    <br />
+    <input type="text" autocomplete="off" placeholder="enter height" id="in" />
+    <br />
+    <br />
+    <input
+      type="text"
+      autocomplete="off"
+      placeholder="enter element"
+      id="in2"
+    />
+    <br />
+    <br />
+    <button onClick="test()">Click to print pattern</button>
+  </body>
+</html>
