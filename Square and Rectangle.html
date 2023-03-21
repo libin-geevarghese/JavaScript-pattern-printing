@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(123, 123, 161)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Squares and rectangle</title>
+    <script>
+      //square
+      function square() {
+        var x = parseInt(document.getElementById("in").value);
+        var y = document.getElementById("in2").value;
+        if (x % 2 != 0) {
+          alert("Enter an Even Number");
+        } else {
+          for (let i = 0; i < x; i++) {
+            for (let j = 0; j < x; j++) {
+              document.write("&nbsp " + y);
+            }
+
+            document.write("<br/>");
+          }
+        }
+      }
+      // Rectangle;
+
+      function rectangle() {
+        var x = parseInt(document.getElementById("in3").value);
+        var y = x / 2;
+        var z = document.getElementById("in4").value;
+        if (x % 2 != 0) {
+          alert("Enter an Even Number");
+        } else {
+          for (i = 0; i < y; i++) {
+            for (j = 0; j < x; j++) {
+              document.write("&nbsp&nbsp&nbsp&nbsp" + z);
+            }
+            document.write("<br /> ");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body style="text-align: center">
+    <div>
+      <h1>Pattern Printing - Square</h1>
+
+      <input type="text" id="in" / placeholder="enter the number of rows">
+      <br />
+      <br />
+      <input type="text" id="in2" placeholder="enter the element to print" />
+      <br />
+      <br />
+      <button onclick="square()">Click to print square</button>
+    </div>
+
+    <div>
+      <h1>Pattern Printing -Rectangle</h1>
+
+      <input type="text" id="in3" / placeholder="enter the length">
+      <br />
+      <br />
+
+      <input type="text" id="in4" placeholder="enter the element to print" />
+      <br />
+      <br />
+      <button onclick="rectangle()">Click to print rectangle</button>
+    </div>
+  </body>
+</html>

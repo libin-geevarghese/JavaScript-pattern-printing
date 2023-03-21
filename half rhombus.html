@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(93, 63, 122)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Half rhombus</title>
+
+    <script>
+      function test() {
+        var x = parseInt(document.getElementById("in").value);
+        var y = document.getElementById("in2").value;
+        var z = x / 2;
+        if (x % 2 != 0) {
+          alert("please enter an even number");
+        } else {
+          for (i = 0; i <= x; i++) {
+            if (i <= z) {
+              for (j = 0; j < i; j++) {
+                document.write(y);
+              }
+            } else {
+              for (j = i; j < x; j++) {
+                document.write(y);
+              }
+            }
+            document.write("<br/>");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body style="text-align: center">
+    <input type="text" autocomplete="off" placeholder="enter height" id="in" />
+    <input
+      type="text"
+      autocomplete="off"
+      placeholder="enter element"
+      id="in2"
+    />
+    <button onClick="test()">Click to print pattern</button>
+  </body>
+</html>

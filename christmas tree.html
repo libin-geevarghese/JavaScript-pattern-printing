@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: rgb(42, 99, 99)">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>x mas tree</title>
+    <script>
+      function test() {
+        var x = parseInt(document.getElementById("in").value);
+        var y = document.getElementById("in2").value;
+
+        for (i = 1; i < x; i++) {
+          for (j = i; j < x; j++) {
+            document.write("&nbsp");
+          }
+          for (j = 0; j < i; j++) {
+            document.write(y);
+          }
+          document.write("<br/>");
+        }
+      }
+    </script>
+  </head>
+  <body style="text-align: center">
+    <input
+      type="text"
+      id="in"
+      placeholder="enter the length"
+      autocomplete="off"
+    />
+    <br />
+    <br />
+
+    <input
+      type="text"
+      id="in2"
+      placeholder="enter the element to print"
+      autocomplete="off"
+    />
+    <br />
+    <br />
+    <button onclick="test()">click to print triangle</button>
+  </body>
+</html>
